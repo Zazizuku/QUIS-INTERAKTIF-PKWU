@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kuis PKWU Interaktif</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Kuis Prakarya dan Kewirausahaan</h1>
+        <p class="subtitle">Uji pemahamanmu tentang materi PKWU.</p>
+
+        <div id="start-screen" class="card">
+            <h2>Selamat Datang!</h2>
+            <p>Silakan masukkan nama lengkap Anda untuk memulai kuis.</p>
+            <input type="text" id="student-name" placeholder="Nama Lengkap Siswa" required>
+            <button id="start-quiz-btn" class="btn primary-btn" disabled>Mulai Kuis</button>
+        </div>
+
+        <div id="finished-message" class="card hidden">
+            <h2 class="finished-title">Kuis Sudah Selesai!</h2>
+            <p class="finished-text">Kamu sudah menyelesaikan kuis ini. Terima kasih!</p>
+        </div>
+        
+        <div id="quiz-container" class="hidden">
+            <div id="quiz-header">
+                <span id="question-indicator" class="indicator"></span>
+            </div>
+            
+            <div id="question-card" class="card">
+                <p id="question-text"></p>
+                <div id="options-container" class="options-group">
+                    </div>
+            </div>
+
+            <div class="navigation-buttons">
+                <button id="prev-btn" class="btn secondary-btn" disabled>⬅️ Sebelumnya</button>
+                <button id="next-btn" class="btn primary-btn">Selanjutnya ➡️</button>
+                <button id="submit-btn" class="btn success-btn hidden">Kirim Jawaban</button>
+            </div>
+        </div>
+
+        <div id="results-container" class="card hidden">
+            <h2>🎉 Hasil Kuis Anda 🎉</h2>
+            <p id="final-score"></p>
+            <p id="completion-time"></p>
+            <p id="motivational-message">Kerja bagus! Terus tingkatkan kemampuanmu 💪</p>
+        </div>
+
+        <div id="admin-tools" class="card admin-mode">
+            <h2>Mode Guru/Admin</h2>
+            <button id="download-results-btn" class="btn admin-btn">Download Hasil (CSV)</button>
+            <p class="small-text">Data ini mencakup semua hasil yang tersimpan di browser ini.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
